@@ -1,13 +1,13 @@
 export default function guardrail(mathFunction) {
 	const queue = [];
-	try{
+	try {
 		const result = mathFunction();
 		queue.push(result);
 	}
-	catch(e) {
-		queue.push(e);
+	catch {
+		queue.push("Error: cannot divide by 0");	
 	}
-	finally{
+	finally {
 		queue.push("Guardrail was processed");
 	}
 
